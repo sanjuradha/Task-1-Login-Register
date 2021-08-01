@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+      
+
+ <div class="container">
+  <div class="card">
+    <div class=inner-box id="card">
+
+    <section class="form_container account_container">
+            
+    <div id="id01" class="modal">
+        <form action="index2.html" class="login_form" id="CreateAccount1">
+            <h2>New here?</h2>
+            <h1>Create an Account to SignUp</h1>
+        
+            <section class="inputs_container">
+                     <!-- firstName -->
+                <div class="input-field ">
+                    <input type="text" id="FirstName" class="user" required />
+                    <span></span>
+                    <label for="name" class="user" id="firstName">First Name</label>
+                </div>
+                    <!-- lastName -->
+                <div class="input-field ">
+                     <input type="text" id="LastName" class="user" required />
+                     <span></span>
+                     <label for="name" class="user" id="lastName">Last Name</label>
+                 </div>
+                    <!-- Email -->
+                <div class="input-field ">
+                     <input type="email" id="UserEmail" class="user" value="" required />
+                     <span></span>
+                     <label for="name" class="user" id="email">Email address</label>
+                </div>
+
+                    <!-- User Password  -->
+                <div class="input-field ">
+                     <input type="password" id="UserPassword" class="user" value="" required />
+                     <span></span>
+                     <label for="password" class="user">Password</label>
+                </div>
+                    <div class="clearfix">  
+                        <button id="submit" type="submit" class="signinbtn" onclick="store()" ><b>Sign Up</b></button>
+                    </div>   
+                    <hr>
+                        <button type="submit1" class="btn" onclick="openRegister()">I've an account !</button>
+          
+            </section>
+        
+            <table class="users_table">
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody id="user-list"></tbody>
+            </table>
+
+        </form>
+    </div>
+    </section>
+
+
+
+    <div id="id02" class="modal1">
+            <div class="login_form" id="CreateAccount1">
+                <h2>Welcome back!!</h2>
+                <h1>Login</h1>
+    
+                <section class="inputs_container">
+                    <!-- Email -->
+                    <div class="input-field ">
+                        <input type="email" id="UserEmail1" class="user" value="" required />
+                        <span></span>
+                        <label for="name" class="user" id="email">Email address</label>
+                    </div>
+
+                    <!-- User Password  -->
+                    <div class="input-field ">
+                        <input type="password" id="UserPassword1" class="user" value="" required />
+                        <span></span>
+                        <label for="password" class="user">Password</label>
+                    </div>
+
+                    <div class="clearfix">  
+                        <button id="submit" value="submit" type="submit" class="signinbtn" onclick="check()" > <b>Login</b></button>
+                    </div>   
+                    <hr>
+
+                    <button type="button" class="btn" onclick="openLogin()">I'm new here !</button>
+                </section>
+            </div>
+
+    </div>
+   </div>
+  </div>
+ </div>
+    <script>
+//storing
+        function store(){
+
+        var name = document.getElementById('UserEmail');
+        var pw = document.getElementById('UserPassword');
+
+
+        localStorage.setItem('UserEmail', name.value);
+        localStorage.setItem('UserPassword', pw.value);
+        alert('Your account has been created');
+
+        }
+//checking
+        function check(){
+
+        var storedName = localStorage.getItem('UserEmail');
+        var storedPw = localStorage.getItem('UserPassword');
+
+        var userName = document.getElementById('UserEmail1');
+        var userPw = document.getElementById('UserPassword1');
+        
+        if(userName.value == storedName && userPw.value == storedPw)
+        {
+           alert("login successfull");
+           location.href="file:///C:/Users/Sanju/Desktop/Whizabs%20Task-1/index2.html";
+        }
+
+        else{
+   
+        alert('Username or password is incorrect');
+        location.href="file:///C:/Users/Sanju/Desktop/Whizabs%20Task-1/modal.html";
+     
+        }   
+}
+      
+    </script>
+    
+   <script src="java.js"></script>
+  </body>
+</html>

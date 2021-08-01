@@ -1,0 +1,174 @@
+body {
+font-family: Arial, Helvetica, sans-serif;    
+background: linear-gradient(120deg, #2980b9, #a631d8);
+
+}
+
+.users_table{
+display: none;
+}
+
+.container{
+width:100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card{
+width: 350px;
+height: 500px;
+box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+perspective: 1000px;
+}
+
+.inner-box{
+position: relative;
+width: 100%;
+height: 100%;
+transform-style:preserve-3d ;
+transition: 1s;
+}
+
+.modal{
+position: absolute;
+width: 100%;
+height: 125%;
+background: #fafafa;
+border-radius: 10px;
+background-position: center;
+background-size: cover;
+padding: 30px;
+box-sizing: border-box;
+backface-visibility: hidden;
+}
+
+
+.modal1{
+position: absolute;
+width: 110%;
+height: 100%;
+background: #fafafa;
+border-radius: 10px;
+background-position: center;
+background-size: cover;
+padding: 55px;
+box-sizing: border-box;
+backface-visibility: hidden;
+}
+
+
+.modal{
+transform: rotateY(180deg);
+}
+
+.modal1{
+transform: rotateY(0deg);
+}
+
+.card h1, h2{
+font-weight: normal;
+font-size: 24px;
+text-align: center;
+margin-bottom: 20px;
+padding: 0 0 20px 0;
+border-bottom: 1px solid silver;
+}
+
+#CreateAccount1 .input-field{
+position: relative;
+border-bottom: 2px solid #adadad;
+margin: 26px 0;
+}
+
+.input-field input{
+width: 100%;
+padding: 0 5px;
+height: 40px;
+font-size: 16px;
+border:none;
+background: none;
+outline: none;
+}
+
+.member {
+text-align: center;
+}
+
+.clearfix {
+text-align: center;
+}
+
+.input-field label{
+width: 110%;
+position: absolute;
+top: 50%;
+left: 5px;
+color: #adadad;
+transform: translateY(-50%);
+font-size: 16px;
+pointer-events: none;
+transition: .5s;
+}
+
+.input-field span::before{
+content: '';
+position: absolute;
+top: 40px;
+left: 0;
+width: 100%;
+height: 2px;
+background:#6dadd8 ;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label{
+top: -9px;
+color: #2691d9 ;
+}
+
+.input-field input:focus ~ span::before,
+.input-field input:valid ~ span::before{
+width: 100%;
+}
+
+button[type="submit"]{
+width: 100%;
+height: 50px;
+border: 1px solid;
+background: #2691d9;
+font-size: 18px;
+color: #e9f4fb;
+font-weight: 700;
+cursor: pointer;
+outline: none;
+}
+
+button[type="submit"]{
+border-color: #2691d9;
+transition: .5s;
+}
+
+button:hover {
+opacity: 1;
+background-color: rgb(104, 159, 223);
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn{
+background-color: white;
+color: black;
+border: 2px solid #555555;
+cursor: pointer;
+padding: 10px 50px;
+width: 100%;
+height: 40px;
+
+}
+
+.btn:hover{
+background-color: #555555;
+color: white;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

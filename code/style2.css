@@ -1,0 +1,50 @@
+header 
+{   
+background-color: rgb(47, 189, 224);
+padding: 10px;
+text-align: center;
+color: black;
+font-size: 25px;
+font-family: monospace;
+}
+
+table
+{
+border-collapse: collapse;
+width: 50%;
+margin: 50px auto;
+background-color: khaki;
+}
+
+table, th, td 
+{
+border: 2px solid black;
+padding: 5px;
+}
+
+th
+{
+font-size: 18px;
+font-weight: 600;
+}
+
+h1{
+text-align: center;
+}
+
+button {
+padding: 7px 30px;
+background-color: white;
+color: black;
+border: 2px solid #555555;
+cursor: pointer;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+    
+button:hover {
+opacity: 1;
+background-color: #555555;
+color: white;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+    

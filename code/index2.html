@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard page</title>    
+<meta charset="utf-8">
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <b>Dashboard</b>
+        <form class="modal-content" action="modal.html">  
+            <hr>
+        <button id="submit" class="signinbtn" onclick="passvalues();"><b>Logout</b></button>
+
+    </header>
+    <h1>Previously signed in user details</h1>
+    <table class ="users_table">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody id="user-list"></tbody>
+
+    </table>
+
+  <script src="java.js"></script>
+
+</body>
+</html>
